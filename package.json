@@ -1,0 +1,31 @@
+{
+  "name": "samirsain",
+  "version": "1.0.0",
+  "description": "npx samirsain — my digital business card in your terminal",
+  "type": "module",
+  "bin": {
+    "samirsain": "bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "business-card",
+    "cli",
+    "npx",
+    "portfolio"
+  ],
+  "author": "Samir Sain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samirsain/npx-card.git"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.3.0"
+  }
+}

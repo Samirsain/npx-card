@@ -11,7 +11,7 @@ const me = {
     Web: "https://samirsain.com",
     Agency: "https://zenviqdigital.in",
     GitHub: "https://github.com/samirsain",
-    Email: "hello@samirsain.com",
+    Email: "hii@samirsain.com",
   },
 };
 

@@ -4,18 +4,23 @@ import boxen from "boxen";
 
 const me = {
   name: "Samir Sain",
-  handle: "@CodeWithSamir",
+  handle: "@samirsain",
   title: "Full-Stack Web Developer",
   role: "Founder, Zenviq Digital",
   links: {
     Web: "https://samirsain.com",
     Agency: "https://zenviqdigital.in",
     GitHub: "https://github.com/samirsain",
+    LinkedIn: "https://linkedin.com/in/samirsain",
+    Instagram: "https://instagram.com/codexmir",
     Email: "hii@samirsain.com",
   },
 };
 
-const label = (text) => chalk.gray(text.padEnd(9));
+const labelWidth =
+  Math.max(...Object.keys(me.links).map((key) => key.length), "Card".length) +
+  2;
+const label = (text) => chalk.gray(text.padEnd(labelWidth));
 
 const lines = [
   chalk.bold.cyan(me.name) + chalk.gray(" / " + me.handle),

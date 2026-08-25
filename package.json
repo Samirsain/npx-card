@@ -1,6 +1,6 @@
 {
   "name": "samirsain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npx samirsain — my digital business card in your terminal",
   "type": "module",
   "bin": {

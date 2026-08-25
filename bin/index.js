@@ -2,6 +2,9 @@
 import chalk from "chalk";
 import boxen from "boxen";
 import figlet from "figlet";
+import clear from "clear";
+import open from "open";
+import inquirer from "inquirer";
 
 const me = {
   name: "Samir Sain",
@@ -49,6 +52,8 @@ const lines = [
   arrow + label("Card:") + chalk.magentaBright("npx samirsain"),
 ];
 
+clear();
+
 console.log(
   boxen(lines.join("\n"), {
     padding: 1,
@@ -59,3 +64,33 @@ console.log(
     titleAlignment: "center",
   })
 );
+
+console.log(
+  chalk.gray(
+    `  Tip: ${chalk.cyanBright.bold("cmd/ctrl + click")} a link above to open it.\n`
+  )
+);
+
+const openLink = (url) => () => {
+  open(url);
+  console.log(chalk.hex("#00ff41")(`\nOpened ${url}\n`));
+};
+
+await inquirer
+  .prompt([
+    {
+      type: "select",
+      name: "action",
+      message: "What do you want to do?",
+      choices: [
+        { name: "Send me an email", value: openLink(`mailto:${me.links.Email}`) },
+        { name: "Visit my website", value: openLink(me.links.Web) },
+        { name: "Check out my agency", value: openLink(me.links.Agency) },
+        { name: "Follow on GitHub", value: openLink(me.links.GitHub) },
+        { name: "Connect on LinkedIn", value: openLink(me.links.LinkedIn) },
+        { name: "Follow on Instagram", value: openLink(me.links.Instagram) },
+        { name: "Just quit", value: () => console.log(chalk.gray("\nOk, bye.\n")) },
+      ],
+    },
+  ])
+  .then((answer) => answer.action());

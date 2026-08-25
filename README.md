@@ -9,8 +9,13 @@ npx samirsain
 ## What it does
 
 `npx samirsain` downloads this package temporarily and runs its `bin` script,
-which prints a boxed card with my name, title, and links (site, agency,
-GitHub, email).
+which:
+
+- clears the screen and prints a hacker-style card — ASCII art name banner,
+  matrix-green gradient, double border — with my links (site, agency,
+  GitHub, LinkedIn, Instagram, email)
+- drops into an interactive menu so you can email me or open any of my
+  links directly from the terminal
 
 ## Local development
 
